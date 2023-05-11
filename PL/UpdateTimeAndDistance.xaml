@@ -1,0 +1,27 @@
+﻿<Window x:Class="PL.UpdateTimeAndDistance"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL"
+        mc:Ignorable="d"
+        Title="Update Time And Distance" Height="415.049" Width="275.545" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="TextStyle" TargetType="Control">
+            <Setter Property="FontFamily" Value="Segoe Print"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="BackGroundLogo.png" Opacity="0.20" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Label Content="Enter Time:" Style="{StaticResource TextStyle}" HorizontalAlignment="Left" Height="40" Margin="72,31,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="TBTime" Style="{StaticResource TextStyle}" HorizontalAlignment="Left" Height="47" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Top" Width="120" Margin="72,89,0,0"/>
+        <Label Content="Enter Distance:" Style="{StaticResource TextStyle}" HorizontalAlignment="Left" Height="42" Margin="52,160,0,0" VerticalAlignment="Top" Width="164"/>
+        <TextBox Name="TBDistance" Style="{StaticResource TextStyle}" KeyDown="keyCheck" HorizontalAlignment="Left" Height="45" Margin="57,220,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="151"/>
+        <Button  Content="Save" HorizontalAlignment="Left" Height="54" Margin="72,303,0,0" VerticalAlignment="Top" Width="136" Click="Save_Button_Click" BorderBrush="#FFEDBF33" Background="White" BorderThickness="5" FontFamily="Segoe Print" FontWeight="Bold" FontSize="25"/>
+
+    </Grid>
+</Window>
